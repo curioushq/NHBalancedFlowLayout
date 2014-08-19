@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- * The BalancedFlowLayout class is designed to display items of different sizes and aspect ratios in a grid, without wasting any visual space. 
+ * The BalancedFlowLayout class is designed to display items of different sizes and aspect ratios in a grid, without wasting any visual space.
  * It takes the preferred sizes for the displayed items and a preferred row height as input to determine the optimal layout.
  *
  * In order to use this layout, the delegate for the collection view must implement the required methods in the BalancedFlowLayoutDelegate protocol.
@@ -20,6 +20,9 @@
 
 // The preferred size for each row measured in the scroll direction
 @property (nonatomic) CGFloat preferredRowSize;
+
+// Whether to force the preferred size from the delegate
+@property (nonatomic) bool forcePreferredSize;
 
 // The size of each section's header. This maybe dynamically adjusted
 // per section via the protocol method referenceSizeForHeaderInSection.
